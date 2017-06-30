@@ -1,19 +1,96 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 23/06/2017, 02:31:09 AM
     Author     : MARCO
 */
+
 *{
     padding: 0px;
-    margin-top: auto;
+    margin: auto;
+
+}
+body{
+    max-width:  95%;   
+    border-color: black;
+
+}
+#main-page-divMain{
+    border: 1px solid;
+
+}
+#main-page-header-div1{
+    display: inline;
+}
+#main-page-inputText1{
+    width: 12%;
+    min-width: 100px;
+    margin-top:  5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  
+    
+}
+#main-page-datosSisofcam{
+    display: inline block;
+    float: right;
+    
+}
+#main-page-galeri-graphicimage{
+    
+}
+ul.ui-galleria-panel-wrapper{
+    
+    
+}
+#main-page-galeria-li{
+    width: 90%;
 }
 
-#prueba {
-    text-align: center;
+
+#main-page-face {
+    position: fixed;
+    left:0px;
+    top: 200px;
+}
+#main-page-twiter {
+    position: fixed;
+    left:0px;
+    top: 233px;
+}
+
+#main-page-linkedin {
+    position: fixed;
+    left:0px;
+    top: 269px;
+}
+#main-page-youtube {
+    position: fixed;
+    left:0px;
+    top: 305px;
+}
+#main-page-instagram {
+    position: fixed;
+    left:0px;
+    top: 340px;
+}
+#main-page-mercadolibre {
+    position: fixed;
+    left:0px;
+    top: 377px;
+}
+
+#main-page-telefono{
+    color: black;
+}
+
+#main-page-combobox1{
+    margin-right: 29px;
+    text-align: right;
+    border-radius: 0px;
+
+}
+
+#main-page-combobox1_label{
+    overflow: visible;  
 }
 
 

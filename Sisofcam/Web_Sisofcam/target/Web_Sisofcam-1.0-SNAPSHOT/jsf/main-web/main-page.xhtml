@@ -2,29 +2,46 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>SISOFCAM</title>
         <link rel="icon" href="#{resource['/images/rueda_ico.ico']}"/>
         <h:outputStylesheet library="css" name="main-web.css"/> 
     </h:head>
     <h:body>    
-        <div id="main-page-div">
-            <header>
-                <p:graphicImage name="/images/facebook_ico.png" />
-                <p:spacer width="5" height="10" />
-                <p:graphicImage name="/images/twitter_ico.png" />
-                <p:spacer width="5" height="10" />
-                <p:graphicImage name="/images/linkedin_ico.png" />
-                <p:spacer width="5" height="10" />
-                <p:graphicImage name="/images/youtube_ico.png" />
-                <p:spacer width="5" height="10" />
-                <p:graphicImage name="/images/instagram_ico.png" />
-                <p:spacer width="5" height="10" />
-                <p:graphicImage name="/images/mercadolibre_ico.png" />
-                <p:spacer width="300" height="10" />  
-                <p:outputLabel value="TELEFONO: 933237590"/>
-                <h1>SISOFCAM TECNOLOGY</h1>
+        <div id="main-page-divMain">
+
+            <p:graphicImage id="main-page-face" name="/images/facebook_ico.png" />
+            <p:graphicImage id="main-page-twiter" name="/images/twitter_ico.png" />
+            <p:graphicImage id="main-page-linkedin" name="/images/linkedin_ico.png" />
+            <p:graphicImage id="main-page-youtube" name="/images/youtube_ico.png" />
+            <p:graphicImage id="main-page-instagram" name="/images/instagram_ico.png" />
+            <p:graphicImage id="main-page-mercadolibre" name="/images/mercadolibre_ico.png" />
+
+            <header id="main-page-header">
+                <div id="main-page-header-div1">
+                    <p:graphicImage id="main-page-logosisofcam" name="/images/Logo_Empresa.png" />
+                </div>
+
+                <div id="main-page-datosSisofcam">
+                    <p:outputLabel id="main-page-telefono" value="TELEFONO: 933237590" />
+                    
+                    <p:inputText id="main-page-inputText1" label="Buscar" />
+
+                    <p:selectOneMenu id="main-page-combobox1" style="padding-right: 10px;  margin-bottom: 0px; ">
+                        <f:selectItem  itemLabel="INTRANET"/>
+                    </p:selectOneMenu>
+
+                </div>
+
+                <div id="main-page-galeria">
+                    <p:galleria id="main-page-galeria-li" value="#{mainWebPrincipal.images}" var="image" panelWidth="1100" panelHeight="400" showCaption="true" effect="puff" >
+                        <p:graphicImage id="main-page-galeri-graphicimage" name="images/#{image}" alt="Image Description for #{image}" title="#{image}" />
+                    </p:galleria>
+                </div>
+
+                <h1 id="main-page-h1">SISOFCAM TECNOLOGY</h1>
             </header>
             <nav> <h2>menu principal</h2></nav>
             <section>
