@@ -11,13 +11,13 @@
     </h:head>
     <h:body>    
         <div id="main-page-divMain">
-
-            <p:graphicImage id="main-page-face" name="/images/facebook_ico.png" />
-            <p:graphicImage id="main-page-twiter" name="/images/twitter_ico.png" />
-            <p:graphicImage id="main-page-linkedin" name="/images/linkedin_ico.png" />
-            <p:graphicImage id="main-page-youtube" name="/images/youtube_ico.png" />
-            <p:graphicImage id="main-page-instagram" name="/images/instagram_ico.png" />
-            <p:graphicImage id="main-page-mercadolibre" name="/images/mercadolibre_ico.png" />
+            
+            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-face" name="/images/facebook_ico.png" /></a>
+            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-twiter" name="/images/twitter_ico.png" /></a>
+            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-linkedin" name="/images/linkedin_ico.png" /></a>
+            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-youtube" name="/images/youtube_ico.png" /></a>
+            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-instagram" name="/images/instagram_ico.png" /></a>
+            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-mercadolibre" name="/images/mercadolibre_ico.png" /></a>
 
             <header id="main-page-header">
                 <div id="main-page-header-div1">
@@ -26,13 +26,19 @@
 
                 <div id="main-page-datosSisofcam">
                     <p:outputLabel id="main-page-telefono" value="TELEFONO: 933237590" />
-                    
-                    <p:inputText id="main-page-inputText1" label="Buscar" />
-
                     <p:selectOneMenu id="main-page-combobox1" style="padding-right: 10px;  margin-bottom: 0px; ">
                         <f:selectItem  itemLabel="INTRANET"/>
                     </p:selectOneMenu>
 
+                </div>
+                <div id="main-page-div-proveedores_logo">
+                    
+                    <p:outputLabel id="main-page-ImportadorExclusivo" value="Importador Exclusivo de " />
+                    <p:graphicImage id="main-page-logoHikvision" name="/images/hikvision_logo.png" />
+                    <p:graphicImage id="main-page-logoZKTeco" name="/images/zkteco_logo.jpg" />
+                    <p:graphicImage id="main-page-logoCommax" name="/images/commax_logo.jpg" />
+                    <p:graphicImage id="main-page-logoCommax" name="/images/TRENDnet_logo.jpg" />
+                    
                 </div>
 
                 <div id="main-page-galeria">
@@ -41,9 +47,26 @@
                     </p:galleria>
                 </div>
 
-                <h1 id="main-page-h1">SISOFCAM TECNOLOGY</h1>
+                <nav id="main-page-nav">
+                    <ul>
+                        <li><a href="#"><span class=""><i class="icon"></i></span>INICIO</a></li>
+                        <li><a href="#"><span class=""></span>CAMARAS</a>
+                            <ul>
+                                <li><a href="#">ITEM #1</a></li>
+                                <li><a href="#">ITEM #2</a></li>
+                                <li><a href="#">ITEM #3</a></li>
+                                <li><a href="#">ITEM #4</a></li>
+                                <li><a href="#">ITEM #5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">INTERCOMUNICADORES</a></li>
+                        <li><a href="#">BIOMETRICOS</a></li>
+                        <li><a href="#">SOPORTE</a></li>
+                        <li><a href="#">SISTEMAS</a></li>
+                    </ul>
+                </nav>
             </header>
-            <nav> <h2>menu principal</h2></nav>
+            
             <section>
                 <article>
                     <header></header>

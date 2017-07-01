@@ -20,62 +20,128 @@ body{
 #main-page-header-div1{
     display: inline;
 }
-#main-page-inputText1{
+#main-page-telefono{
     width: 12%;
     min-width: 100px;
-    margin-top:  5%;
-    margin-left: 5%;
     margin-right: 5%;
-  
-    
 }
 #main-page-datosSisofcam{
-    display: inline block;
+    display: inline-block;
     float: right;
-    
+    width: 400px;
+    margin-top: 2%;
 }
-#main-page-galeri-graphicimage{
-    
+#main-page-ImportadorExclusivo{
+    background-color: transparent;
+    color: activecaption;
+    margin-left: 4%;
 }
-ul.ui-galleria-panel-wrapper{
-    
-    
+
+#main-page-div-proveedores_logo img{
+    margin-left: 1%;
 }
 #main-page-galeria-li{
     width: 90%;
 }
 
+nav>ul {
 
-#main-page-face {
+    background: #000;
+    display: table;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+}
+nav > ul li{
+    display: table-cell;
+    margin: 2%;
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
+
+} 
+nav > ul li a{
+    display: block;
+    color: #fff;
+    line-height: 20px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+nav > ul > li > ul > li{
+    margin-top: 10%;
+    list-style: none;
+}
+nav > ul > li > ul{
+    display: block;
+    position: absolute;
+    background: #000;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    height: 0%;
+
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+nav>ul>li:hover>ul{
+    display: block;
+    position: absolute;
+    height: 100%;
+
+}
+
+#main-page-face, #main-page-twiter, #main-page-linkedin, #main-page-youtube, #main-page-instagram, #main-page-mercadolibre{
     position: fixed;
     left:0px;
     top: 200px;
+
+
+} 
+#main-page-face:hover{
+    transform: scale(1.2,1.2);
 }
 #main-page-twiter {
-    position: fixed;
-    left:0px;
     top: 233px;
 }
 
+#main-page-twiter:hover {
+    transform: scale(1.2,1.2);
+}
 #main-page-linkedin {
-    position: fixed;
-    left:0px;
     top: 269px;
 }
+#main-page-linkedin:hover {
+    transform: scale(1.2,1.2);
+}
 #main-page-youtube {
-    position: fixed;
-    left:0px;
     top: 305px;
 }
+#main-page-youtube:hover{
+    transform: scale(1.2,1.2);
+}
 #main-page-instagram {
-    position: fixed;
-    left:0px;
     top: 340px;
 }
+#main-page-instagram:hover {
+    transform: scale(1.2,1.2);
+}
 #main-page-mercadolibre {
-    position: fixed;
-    left:0px;
     top: 377px;
+}
+#main-page-mercadolibre:hover {
+    transform: scale(1.2,1.2);
 }
 
 #main-page-telefono{
