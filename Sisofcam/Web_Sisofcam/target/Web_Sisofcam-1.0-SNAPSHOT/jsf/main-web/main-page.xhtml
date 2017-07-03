@@ -8,10 +8,13 @@
         <title>SISOFCAM</title>
         <link rel="icon" href="#{resource['/images/rueda_ico.ico']}"/>
         <h:outputStylesheet library="css" name="main-web.css"/> 
+        <script src="/resources/js/particles.js"></script>
+        <h:outputScript library="js" name="particles.js"/>
     </h:head>
     <h:body>    
-        <div id="main-page-divMain">
-            
+        <main id="main-page-divMain">
+
+            <!-- imagenes social -->
             <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-face" name="/images/facebook_ico.png" /></a>
             <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-twiter" name="/images/twitter_ico.png" /></a>
             <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-linkedin" name="/images/linkedin_ico.png" /></a>
@@ -20,33 +23,36 @@
             <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-mercadolibre" name="/images/mercadolibre_ico.png" /></a>
 
             <header id="main-page-header">
+
+                <div id="main-page-datosSisofcam">
+                    <div id="main-page-div-imagen-datosSisofcam">
+                        <p:graphicImage id="main-page-img-telefono" name="/images/telefono.png"/>
+                    </div>
+                    <div id="main-page-div-label-datosSisofcam">
+                    <p:outputLabel id="main-page-telefono" value="Llámenos al: 933-237590|960-558583"/>
+                    </div>
+                </div>
+
                 <div id="main-page-header-div1">
                     <p:graphicImage id="main-page-logosisofcam" name="/images/Logo_Empresa.png" />
                 </div>
 
-                <div id="main-page-datosSisofcam">
-                    <p:outputLabel id="main-page-telefono" value="TELEFONO: 933237590" />
-                    <p:selectOneMenu id="main-page-combobox1" style="padding-right: 10px;  margin-bottom: 0px; ">
-                        <f:selectItem  itemLabel="INTRANET"/>
-                    </p:selectOneMenu>
 
-                </div>
+                <!--
+                <p:selectOneMenu id="main-page-combobox1" style="padding-right: 10px;  margin-bottom: 0px;  ">
+                    <f:selectItem  itemLabel="INTRANET"/>
+                </p:selectOneMenu>
+                -->
+
                 <div id="main-page-div-proveedores_logo">
-                    
+
                     <p:outputLabel id="main-page-ImportadorExclusivo" value="Importador Exclusivo de " />
                     <p:graphicImage id="main-page-logoHikvision" name="/images/hikvision_logo.png" />
                     <p:graphicImage id="main-page-logoZKTeco" name="/images/zkteco_logo.jpg" />
                     <p:graphicImage id="main-page-logoCommax" name="/images/commax_logo.jpg" />
                     <p:graphicImage id="main-page-logoCommax" name="/images/TRENDnet_logo.jpg" />
-                    
-                </div>
 
-                <div id="main-page-galeria">
-                    <p:galleria id="main-page-galeria-li" value="#{mainWebPrincipal.images}" var="image" panelWidth="1100" panelHeight="400" showCaption="true" effect="puff" >
-                        <p:graphicImage id="main-page-galeri-graphicimage" name="images/#{image}" alt="Image Description for #{image}" title="#{image}" />
-                    </p:galleria>
                 </div>
-
                 <nav id="main-page-nav">
                     <ul>
                         <li><a href="#"><span class=""><i class="icon"></i></span>INICIO</a></li>
@@ -65,19 +71,53 @@
                         <li><a href="#">SISTEMAS</a></li>
                     </ul>
                 </nav>
+                <div id="main-page-galeria">
+                    <p:galleria id="main-page-galeria-li" value="#{mainWebPrincipal.images}" var="image" panelWidth="1100" panelHeight="400" showCaption="true" effect="puff" >
+                        <p:graphicImage id="main-page-galeri-graphicimage" name="images/#{image}" alt="Image Description for #{image}" title="#{image}" />
+                    </p:galleria>
+                </div>
+
+
             </header>
-            
-            <section>
+
+            <section id="main-page-section-main">
                 <article>
-                    <header></header>
-                    <footer></footer>
+                    <section id="main-page-article-section">
+                        <div id="main-page-div-caterogias">
+                            <p:outputLabel id="main-page-label-categoria" value="CATEGORIAS"/> 
+                        </div>
+
+                        <div id="main-page-div-seguridad">
+                            <div id="main-page-div-camaraimage">
+                                <p:graphicImage name="/images/cat_seguridad.jpg" />
+                            </div>
+                            <hr id="main-page-hr1"></hr>
+                            <p:outputLabel id="main-page-label-seguridad" value="SEGURIDAD"/>
+                        </div>
+
+                        <div id="main-page-div-controlAcceso">
+                            <div id="main-page-div-videoPortero">
+                                <p:graphicImage name="/images/cat_controlAcceso.jpg" />
+                            </div>
+                            <hr id="main-page-hr2"></hr> 
+                            <p:outputLabel id="main-page-label-controlAcceso" value="CONTROL DE ACCESO"/>
+                        </div>
+                    </section>
+
                 </article>
-                <article></article>
+                <article>
+
+                </article>
 
             </section>
             <aside></aside>
-            <footer></footer> 
-        </div>
+            <footer id="main-page-footer">
+                <div id="main-page-header-div-olva">
+                    <p:graphicImage id="main-page-olva" name="/images/olva_curier.jpg" />
+                </div>
+
+            </footer> 
+        </main>
 
 
     </h:body>
