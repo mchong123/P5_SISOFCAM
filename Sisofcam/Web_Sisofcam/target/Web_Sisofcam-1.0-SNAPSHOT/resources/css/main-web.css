@@ -5,7 +5,7 @@
 
 *{
     padding: 0px;
-    margin: auto;
+    margin: 0px;;
     box-sizing: border-box;
 
 }
@@ -23,30 +23,49 @@ body{
     margin-right: 35px;
 }
 
-#main-page-header-div1{
-    display: inline;
-}
+
 
 #main-page-datosSisofcam{
-    background: darkolivegreen;
-    height: 50px;
-    display: flex;
+    background: #024959;
+    height: 40px;
     position: relative;
+
+    flex-grap:grap;
+}
+#main-page-a-menu{
+    display: none;
+}
+#main-page-ul-datosSisofcam{
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    height: 100%;
+
 }
-#main-page-img-telefono{
-    left: 0px;
-    bottom: 0px;
-    position: absolute;
+#main-page-ul-datosSisofcam>li{
+    display: inline-block;
+    height: 100%;
 }
-#main-page-telefono{
-    color: white;
-    font-family: monospace;
-    font-size: 20px;
-    min-width: 100px;
+#main-page-ul-datosSisofcam>li>a{
+    display:inline-block;
+    color:#fff; 
+    margin-top: 10px;
+    text-decoration: none;
+}
+#main-page-ul-datosSisofcam>li>a>span{
+    margin-right: 10px;
 }
 
 
+
+#main-page-header-div1{
+    display: inline-block;
+}
+#main-page-logosisofcam{
+    width: 100%;
+}
 
 
 #main-page-ImportadorExclusivo{
@@ -199,7 +218,7 @@ nav>ul>li:hover>ul{
     display: inline-block;
     width: 300px;
     margin-bottom: 20px;
-    
+
 }
 
 #main-page-div-camaraimage{
@@ -229,7 +248,7 @@ nav>ul>li:hover>ul{
     width: 400px;
 }
 #main-page-div-videoPortero{
-     margin-left: 1%;
+    margin-left: 1%;
     display: inline-block;
     border: solid 1px;
     margin-left: 20px;
@@ -251,6 +270,14 @@ nav>ul>li:hover>ul{
 }
 
 
+
+#main-page-section-subcategorias{
+
+    width: 65%;
+    float: right;
+
+}
+
 /*********************************FIN SECTION***********************************/
 /*****************************INICIO FOOTER*************************************/
 #main-page-footer{  
@@ -262,3 +289,52 @@ nav>ul>li:hover>ul{
 }
 
 /*****************************END FOOTER*************************************/
+/*MEDIA QUERY*/
+
+@media screen and (max-width:600px){
+    
+    #main-page-ul-datosSisofcam{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 138px;
+        position: fixed;
+        margin: 0px;
+        background: #024959;
+    }
+    #main-page-ul-datosSisofcam>li {
+        height: 20px;
+    }
+    #main-page-a-menu{
+        display: flex;
+        color: #fff;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 10px;
+        text-decoration: none;  
+
+    }
+    #main-page-a-menu>span{
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    #main-page-a-menu>strong{
+        float:left;
+        margin-top: 10px;
+        margin-left: 15px;
+        font-size: 20px;
+    }
+    #main-page-face, #main-page-twiter, #main-page-linkedin, #main-page-youtube, #main-page-instagram, #main-page-mercadolibre{
+        display:none;
+    }
+    #main-page-ImportadorExclusivo,#main-page-logoHikvision,#main-page-logoZKTeco,#main-page-logoCommax,#main-page-logoCommax{
+         display:none;
+    }
+    
+    #main-page-divMain{
+        width: 100%;
+        margin:0px;
+    }
+}

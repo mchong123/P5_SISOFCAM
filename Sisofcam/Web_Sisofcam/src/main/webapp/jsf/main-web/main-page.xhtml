@@ -8,8 +8,8 @@
         <title>SISOFCAM</title>
         <link rel="icon" href="#{resource['/images/rueda_ico.ico']}"/>
         <h:outputStylesheet library="css" name="main-web.css"/> 
-        <script src="/resources/js/particles.js"></script>
-        <h:outputScript library="js" name="particles.js"/>
+        <link rel="stylesheet" type="text/css" href="#{resource['/css/style.css']}"></link>
+       
     </h:head>
     <h:body>    
         <main id="main-page-divMain">
@@ -23,21 +23,28 @@
             <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-mercadolibre" name="/images/mercadolibre_ico.png" /></a>
 
             <header id="main-page-header">
-
+                
                 <div id="main-page-datosSisofcam">
-                    <div id="main-page-div-imagen-datosSisofcam">
-                        <p:graphicImage id="main-page-img-telefono" name="/images/telefono.png"/>
-                    </div>
-                    <div id="main-page-div-label-datosSisofcam">
-                    <p:outputLabel id="main-page-telefono" value="Llámenos al: 933-237590|960-558583"/>
-                    </div>
+                    <a href="#" id="main-page-a-menu"><span class="icon-menu"></span><strong>MENU</strong></a>
+                    <ul id="main-page-ul-datosSisofcam">
+                        <li><a href="#"><span class="icon-home3"></span>INICIO</a></li>
+                        <li><a href="#"><span class="icon-phone"></span>TELEFONOS</a></li>
+                        <li><a href="#"><span class="icon-location"></span>UBICANOS</a></li>
+                        <li><a href="#"><span class="icon-key2"></span>INTRANET</a></li>
+                    </ul>
+                    
+
                 </div>
 
-                <div id="main-page-header-div1">
-                    <p:graphicImage id="main-page-logosisofcam" name="/images/Logo_Empresa.png" />
-                </div>
 
+                <div id="main-page-header-div0">  
+                    <div id="main-page-header-div1">
+                        <p:graphicImage id="main-page-logosisofcam" name="/images/Logo_Empresa.png" />
+                    </div>
+                    <div id="main-page-header-div2">
 
+                    </div>    
+                </div> 
                 <!--
                 <p:selectOneMenu id="main-page-combobox1" style="padding-right: 10px;  margin-bottom: 0px;  ">
                     <f:selectItem  itemLabel="INTRANET"/>
@@ -46,7 +53,7 @@
 
                 <div id="main-page-div-proveedores_logo">
 
-                    <p:outputLabel id="main-page-ImportadorExclusivo" value="Importador Exclusivo de " />
+                    <p:outputLabel  id="main-page-ImportadorExclusivo" value="Importador Exclusivo de " />
                     <p:graphicImage id="main-page-logoHikvision" name="/images/hikvision_logo.png" />
                     <p:graphicImage id="main-page-logoZKTeco" name="/images/zkteco_logo.jpg" />
                     <p:graphicImage id="main-page-logoCommax" name="/images/commax_logo.jpg" />
@@ -101,6 +108,25 @@
                             </div>
                             <hr id="main-page-hr2"></hr> 
                             <p:outputLabel id="main-page-label-controlAcceso" value="CONTROL DE ACCESO"/>
+                        </div>
+
+                        <div id="main-page-div-controlAcceso">
+                            <div id="main-page-div-videoPortero">
+                                <p:graphicImage name="/images/cat_controlAcceso.jpg" />
+                            </div>
+                            <hr id="main-page-hr2"></hr> 
+                            <p:outputLabel id="main-page-label-controlAcceso" value="LECTORES"/>
+                        </div>
+
+
+                    </section>  
+                    <section id="main-page-section-subcategorias">
+                        <div id="main-page-div-controlAcceso">
+                            <div id="main-page-div-videoPortero">
+                                <p:graphicImage name="/images/cat_controlAcceso.jpg" />
+                            </div>
+                            <hr id="main-page-hr2"></hr> 
+                            <p:outputLabel id="main-page-label-controlAcceso" value="LECTORES"/>
                         </div>
                     </section>
 
