@@ -18,7 +18,8 @@ body{
 /*****************************INICIO HEADER************************************/
 
 #main-page-divMain{
-    border: 1px solid;
+    -webkit-box-shadow: -3px 1px 5px 3px rgba(0,0,0,.8);
+    box-shadow: -3px 1px 5px 3px rgba(0,0,0,.8);    
     margin-left: 35px;
     margin-right: 35px;
 }
@@ -29,8 +30,8 @@ body{
     background: #024959;
     height: 40px;
     position: relative;
-
     flex-grap:grap;
+    z-index: 7;
 }
 #main-page-a-menu{
     display: none;
@@ -39,7 +40,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
     list-style: none;
     height: 100%;
 
@@ -53,18 +54,63 @@ body{
     color:#fff; 
     margin-top: 10px;
     text-decoration: none;
+    font-size: 12px;
+    margin-right: 30px;
+}
+#main-page-ul-datosSisofcam>li>a:hover{
+    color: orange;
 }
 #main-page-ul-datosSisofcam>li>a>span{
     margin-right: 10px;
 }
-
+#main-page-header-div0{
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    background: #FFF;
+    z-index: 5;
+}
 
 
 #main-page-header-div1{
     display: inline-block;
+
+}
+#main-page-header-div2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+}
+#main-page-div2-imagenNav{
+    height: 120px;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    transition: all .3s ease;
+    -webkit-box-shadow: 0 10px 15px -5px rgba(0,0,0,0.65);
+    box-shadow: 0 10px 15px -5px rgba(0,0,0,0.65);
+}
+#main-page-div2-descripcionImage{
+    height: 120px;
+    width: 50%;
+    -webkit-box-shadow: 0 10px 15px -5px rgba(0,0,0,0.65);
+    box-shadow: 0 10px 15px -5px rgba(0,0,0,0.65);
+    transition: all 2s ease;
+    background: aliceblue;
+}
+#main-page-div2-descripcionImage h3{
+    text-align: center;
+    transition: all 2s ease;
+}
+
+#main-page-div2-descripcionImage p{
+    transition: all 2s ease;
+    margin: 10px;
 }
 #main-page-logosisofcam{
-    width: 100%;
+    width: 100%;    
 }
 
 
@@ -73,119 +119,216 @@ body{
     color: activecaption;
     margin-left: 4%;
 }
-
+#main-page-div-proveedores_logo{
+    position: relative;
+    background: #FFF;
+    z-index: 8;
+}
 #main-page-div-proveedores_logo img{
     margin-left: 1%;
 }
 
-/*******************************INICIO NAV*************************************/
-#main-page-galeria-li{
-    width: 90%;
+/*******************************INICIO GALERIA*************************************/
+
+#contenedor-galeria{
+    margin: auto;
+    width: 100%;
+    height: 480px;
+    border-bottom:solid 1px;
+}
+#contenedor-imagen{
+    width: 100%;
+    height: 370px;
+
 
 }
-#main-page-galeria-li.ui-galleria-panel-wrapper{
-
-    z-index: -5;
+#main-page-imagen-galeria{
+    width: 100%;
+    position:relative;
+    z-index: -17
 }
 
-
-nav>ul {
-
+#contenedor-descripcion-imagenes{
+    width: 100%;
+    border: solid 1px;
     background: #000;
-    display: table;
+    height: 50px;   
+    opacity: 0.5;
+}
+#contenedor-descripcion-imagenes p{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 1%;
+    margin-left: 15px;
     position: relative;
+    left: -100%;
+}
+
+#contenedor-imagenes-chicas img{
+    width: 60px;
+    height: 40px;
+    margin-bottom: 5px;
+    opacity: 0.5;
+    cursor:pointer;
+}
+#listUl{
+    list-style: none;
+    display: flex;
+    flex-direction:row;
+    justify-content:left;
+    margin-top: 10px;
+
+}
+
+#listUl li:first-child span{
+    float:left;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor:pointer;
+    border-radius: 90px 90px 90px 90px;
+    transition: all .5s ease;
+
+}
+#listUl li:first-child span:hover{
+    background: #000;
+    color: #fff;
+}
+#listUl li:last-child{
+    display: inline-block;
+    width: 100%;	
+    cursor:pointer;
+}
+
+#listUl li:last-child span{
+    float: right;
+    margin-right: 20px;
+    margin-top: 2%;
+    border-radius: 90px 90px 90px 90px;
+    transition: all .5s ease;
+}
+#listUl li:last-child span:hover{
+    background: #000;
+    color: #fff;
+
+}
+
+/*-----------------INICIO NAV-------------------------*/
+nav{
+    position:relative;
+    z-index: 3;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+
+}
+nav a:hover{
+    color:orange;
+}
+nav>ul>li>a{
+
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    transition: all 1s ease;
+}
+nav ul{
+    list-style: none;
+    background: #252525;
+}
+
+nav>ul{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    height: 40px;
+    position:relative;
+}
+
+nav>ul>li{
+
     text-align: center;
+    height: 100%;
     width: 100%;
 
 }
-nav > ul li{
-    display: table-cell;
-    margin: 2%;
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -ms-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    transition: all 3s ease;
-
-} 
-nav > ul li a{
-    display: block;
-    color: #fff;
-    line-height: 20px;
+nav>ul>li ul li{
     padding: 10px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    z-index: 8;
-
+    position:relative;
 }
 
 
-nav > ul > li > ul > li{
-    margin-top: 10%;
-    list-style: none;
+nav>ul>li>ul{
+    position:relative;
+    top:-500px;
+    transition:all 0.5s ease;
+    z-index: -1;    
 }
-nav > ul > li > ul{
+
+nav>ul>li>ul>li>ul{
+    transition:all 0.2s ease;
+    position:absolute;
+    top:-500px;
+    left: 140px;
+    width: 100%;
+}
+nav li:hover > ul{
     display: block;
-    position: absolute;
-    background: #000;
-    left: 0px;
-    right: 0px;
-    overflow: hidden;
-    height: 0%;
-    z-index: 8;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}
-
-nav>ul>li:hover>ul{
-    display: block;
-    position: absolute;
-    height: 100%;
+    top:0px;
 
 }
+
 
 /***********************************FIN NAV************************************/
 #main-page-face, #main-page-twiter, #main-page-linkedin, #main-page-youtube, #main-page-instagram, #main-page-mercadolibre{
     position: fixed;
-    left:0px;
-    top: 200px;
-
+    right:10px;
+    top: 50px;
+    color:#000;
+    transition: all 0.1s ease;
+    font-size: 20px;
 
 } 
 #main-page-face:hover{
     transform: scale(1.2,1.2);
+    color: #4267b2;
 }
 #main-page-twiter {
-    top: 233px;
+    top: 75px;
 }
 
 #main-page-twiter:hover {
     transform: scale(1.2,1.2);
+    color: #90D4F9;
 }
 #main-page-linkedin {
-    top: 269px;
+    top: 100px;
 }
 #main-page-linkedin:hover {
     transform: scale(1.2,1.2);
+    color: #3FAEEA;
 }   
 #main-page-youtube {
-    top: 305px;
+    top: 125px;
 }
 #main-page-youtube:hover{
     transform: scale(1.2,1.2);
+    color: red;
 }
 #main-page-instagram {
-    top: 340px;
+    top: 150px;
 }
 #main-page-instagram:hover {
     transform: scale(1.2,1.2);
+    color: red;
 }
 #main-page-mercadolibre {
-    top: 377px;
+    top: 175px;
 }
 #main-page-mercadolibre:hover {
     transform: scale(1.2,1.2);
@@ -272,10 +415,8 @@ nav>ul>li:hover>ul{
 
 
 #main-page-section-subcategorias{
-
     width: 65%;
     float: right;
-
 }
 
 /*********************************FIN SECTION***********************************/
@@ -288,29 +429,46 @@ nav>ul>li:hover>ul{
     position: relative;
 }
 
+.main-page-boton-arriba{
+    position: fixed;
+    right: 5px;
+    font-size: 30px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    cursor: pointer;
+}
+#particles-js{
+	width: 100%;
+	height: 300px;
+
+}
+
 /*****************************END FOOTER*************************************/
 /*MEDIA QUERY*/
 
 @media screen and (max-width:600px){
-    
+
     #main-page-ul-datosSisofcam{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 75%;
         height: 138px;
-        position: fixed;
+        position: relative;
         margin: 0px;
+        left: -100%;
         background: #024959;
     }
     #main-page-ul-datosSisofcam>li {
         height: 20px;
     }
+
     #main-page-a-menu{
         display: flex;
         color: #fff;
         flex-direction: row-reverse;
         justify-content: space-between;
-        margin-top: 10px;
         text-decoration: none;  
 
     }
@@ -330,9 +488,9 @@ nav>ul>li:hover>ul{
         display:none;
     }
     #main-page-ImportadorExclusivo,#main-page-logoHikvision,#main-page-logoZKTeco,#main-page-logoCommax,#main-page-logoCommax{
-         display:none;
+        display:none;
     }
-    
+
     #main-page-divMain{
         width: 100%;
         margin:0px;

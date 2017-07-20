@@ -5,34 +5,38 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
         <title>SISOFCAM</title>
         <link rel="icon" href="#{resource['/images/rueda_ico.ico']}"/>
         <h:outputStylesheet library="css" name="main-web.css"/> 
         <link rel="stylesheet" type="text/css" href="#{resource['/css/style.css']}"></link>
-       
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <h:outputScript library="js" name="main-page-script.js"/>
+
+
     </h:head>
-    <h:body>    
+    <h:body>        
         <main id="main-page-divMain">
 
             <!-- imagenes social -->
-            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-face" name="/images/facebook_ico.png" /></a>
-            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-twiter" name="/images/twitter_ico.png" /></a>
-            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-linkedin" name="/images/linkedin_ico.png" /></a>
-            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-youtube" name="/images/youtube_ico.png" /></a>
-            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-instagram" name="/images/instagram_ico.png" /></a>
-            <a href="https://www.facebook.com/" target="_blank"><p:graphicImage id="main-page-mercadolibre" name="/images/mercadolibre_ico.png" /></a>
+            <a href="https://www.facebook.com/" target="_blank"><span id="main-page-face" class="icon-facebook2"></span></a>
+            <a href="https://www.facebook.com/" target="_blank"><span id="main-page-twiter" class="icon-twitter"></span></a>
+            <a href="https://www.facebook.com/" target="_blank"><span id="main-page-linkedin" class="icon-linkedin"></span></a>
+            <a href="https://www.facebook.com/" target="_blank"><span id="main-page-youtube" class="icon-youtube"></span></a>
+            <a href="https://www.facebook.com/" target="_blank"><span id="main-page-instagram" class="icon-instagram"></span></a>
 
             <header id="main-page-header">
-                
+
                 <div id="main-page-datosSisofcam">
                     <a href="#" id="main-page-a-menu"><span class="icon-menu"></span><strong>MENU</strong></a>
                     <ul id="main-page-ul-datosSisofcam">
                         <li><a href="#"><span class="icon-home3"></span>INICIO</a></li>
+                        <li><a href="#"><span class="icon-users"></span>NOSOTROS</a></li>
                         <li><a href="#"><span class="icon-phone"></span>TELEFONOS</a></li>
                         <li><a href="#"><span class="icon-location"></span>UBICANOS</a></li>
                         <li><a href="#"><span class="icon-key2"></span>INTRANET</a></li>
                     </ul>
-                    
+
 
                 </div>
 
@@ -42,7 +46,14 @@
                         <p:graphicImage id="main-page-logosisofcam" name="/images/Logo_Empresa.png" />
                     </div>
                     <div id="main-page-header-div2">
+                        <div id="main-page-div2-imagenNav">
+                                
 
+                        </div>  
+                        <div id="main-page-div2-descripcionImage">
+                            <h3></h3>   
+                            <p></p>
+                        </div>
                     </div>    
                 </div> 
                 <!--
@@ -52,37 +63,191 @@
                 -->
 
                 <div id="main-page-div-proveedores_logo">
-
+<!--
                     <p:outputLabel  id="main-page-ImportadorExclusivo" value="Importador Exclusivo de " />
                     <p:graphicImage id="main-page-logoHikvision" name="/images/hikvision_logo.png" />
                     <p:graphicImage id="main-page-logoZKTeco" name="/images/zkteco_logo.jpg" />
                     <p:graphicImage id="main-page-logoCommax" name="/images/commax_logo.jpg" />
                     <p:graphicImage id="main-page-logoCommax" name="/images/TRENDnet_logo.jpg" />
-
+-->
                 </div>
                 <nav id="main-page-nav">
-                    <ul>
-                        <li><a href="#"><span class=""><i class="icon"></i></span>INICIO</a></li>
-                        <li><a href="#"><span class=""></span>CAMARAS</a>
+                    <ul>	
+                        <li><a href="#">CAMARAS</a>
                             <ul>
-                                <li><a href="#">ITEM #1</a></li>
-                                <li><a href="#">ITEM #2</a></li>
-                                <li><a href="#">ITEM #3</a></li>
-                                <li><a href="#">ITEM #4</a></li>
-                                <li><a href="#">ITEM #5</a></li>
+                                <li id="mp-cam-analogicas"><a href="#">ANALOGICAS </a>
+                                    <ul>
+                                        <li id="mp-cam-analogicasHD"><a href="#">HD 720PX</a></li>
+
+                                        <li id="mp-cam-analogicasFULL"><a href="#">FULL HD 1080PX</a></li>
+                                    </ul>
+                                </li>
+                                <li id="mp-cam-IP"><a href="#">IP</a>
+                                    <ul>
+                                        <li><a href="#">2 Mpx</a></li>
+                                                    
+                                        <li><a href="#">3 Mpx</a></li>
+                                    </ul>	
+                                </li>
+                                <li id="mp-cam-varifocal"><a href="#">Varifocales</a>
+                                    <ul>
+                                        <li><a href="#">HD</a></li>
+                                        <li><a href="#">Full HD</a></li>
+                                       
+                                    </ul>
+                                </li>
+                                <li id="mp-cam-ptz1"><a href="#">PTZ</a>
+                                    <ul>
+                                        <li><a href="#">SEG#1</a></li>
+
+                                        <li><a href="#">SEG#5</a></li>
+                                    </ul>
+                                </li>
+                                <li id="mp-cam-espia1"><a href="#">Espías</a></li>
+                                <li id="mp-cam-falsas"><a href="#">Falsas</a></li>
+                                <li><a href="#">Complementos</a>
+                                    <ul>
+                                        <li><a href="#">DVR</a></li>
+                                        <li><a href="#">Disco Duro</a></li>
+                                        <li><a href="#">Gabinetes</a></li>
+                                        <li><a href="#">Balun de video</a></li>
+                                        <li><a href="#">Adaptadores</a></li>
+                                        <li><a href="#">Cable UTP</a></li>
+                                        <li><a href="#">Mas opciones</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Ver todas</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="#">INTERCOMUNICADORES</a>
+                            <ul>
+                                <li><a href="#">Video porteros</a></li>
+
+                                <li><a href="#">ITEM #6</a>
+                                    <ul>
+                                        <li><a href="#">OTE,# 7</a></li>
+
+                                        <li><a href="#">ITEM #5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">ITEM #7</a></li>
+
+                                <li><a href="#">ITEM #6</a></li>
+
+
                             </ul>
                         </li>
-                        <li><a href="#">INTERCOMUNICADORES</a></li>
-                        <li><a href="#">BIOMETRICOS</a></li>
-                        <li><a href="#">SOPORTE</a></li>
-                        <li><a href="#">SISTEMAS</a></li>
-                    </ul>
+                        <li><a href="#">ALARMAS</a>
+                            <ul>
+                                <li><a href="#">Hogar</a></li>
+                                <li><a href="#">Negocio</a></li>
+                                <li><a href="#">Vecinales</a></li>
+                                <li><a href="#">Autos</a></li>
+                                <li><a href="#">Motos</a></li>
+                            </ul>
+                        </li>
+                         <li><a href="#">LECTORES</a>
+                            <ul>
+                                <li><a href="#">Biometricos</a></li>
+                                <li><a href="#">Codigo de barras</a></li>
+                                <li><a href="#">Codigo QR</a></li>
+                                <li><a href="#">Huella</a></li>
+                                <li><a href="#">DNI Electronico</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">REDES</a>
+                            <ul>
+                                <li><a href="#">Switch</a></li>
+                                <li><a href="#">Access Point</a></li>
+                                <li><a href="#">Router</a></li>
+                                <li><a href="#">USB Wifi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">ACCESORIOS</a>
+                            <ul>
+                                <li><a href="#">Para cámaras</a></li>
+
+                                <li><a href="#">Para Intercomunicadores</a>
+                                    <ul>
+                                        <li><a href="#">camara de seguridad ptz</a></li>
+
+                                        <li><a href="#">ITEM #5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">ITEM #7</a></li>
+                                <li><a href="#">ITEM #6</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">SISTEMAS</a>
+                            <ul>
+                                <li><a href="#">Para negocios</a></li>
+
+                                <li><a href="#">ITEM #5</a></li>
+                                <li><a href="#">ITEM #6</a>
+                                    <ul>
+                                        <li><a href="#">camara de seguridad ptz</a></li>
+
+                                        <li><a href="#">ITEM #5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">ITEM #7</a></li>
+
+
+
+                            </ul>
+                        </li>
+                        <li><a href="#">SERVICIOS</a>
+                            <ul>
+                                <li><a href="#">ITEM #1</a></li>
+
+                                <li><a href="#">ITEM #6</a>
+                                    <ul>
+                                        <li><a href="#">camara de seguridad ptz</a></li>
+
+                                        <li><a href="#">ITEM #5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">ITEM #7</a></li>
+
+                                <li><a href="#">ITEM #6</a></li>
+
+
+                            </ul>
+                        </li>
+                        
+                       
+                    </ul>	
+
                 </nav>
-                <div id="main-page-galeria">
-                    <p:galleria id="main-page-galeria-li" value="#{mainWebPrincipal.images}" var="image" panelWidth="1100" panelHeight="400" showCaption="true" effect="puff" >
-                        <p:graphicImage id="main-page-galeri-graphicimage" name="images/#{image}" alt="Image Description for #{image}" title="#{image}" />
-                    </p:galleria>
+
+
+
+
+                <div id= "contenedor-galeria">
+                    <div id="contenedor-imagen">
+                        <img id="main-page-imagen-galeria" src="#{resource['images/image0.jpg']}" alt=""/>
+                    </div>
+
+                    <div id="contenedor-descripcion-imagenes">
+                        <p></p>
+                    </div>
+                    <div id="contenedor-imagenes-chicas">
+
+                        <ul id="listUl">
+                            <li><span class="icon-circle-left"></span></li>
+                            <li><img id= "imagen-0" class="imagen" src="#{resource['images/image0.jpg']}" alt=""/></li>
+                            <li><img id= "imagen-1" class="imagen" src="#{resource['images/image1.jpg']}" alt=""/></li>
+                            <li><img id= "imagen-2" class="imagen" src="#{resource['images/image2.jpg']}" alt=""/></li>
+                            <li><span class="icon-circle-right"></span></li>
+                        </ul>
+
+                    </div>
                 </div>
+
+
+
+
 
 
             </header>
@@ -138,14 +303,17 @@
             </section>
             <aside></aside>
             <footer id="main-page-footer">
+                <div id="particles-js">
                 <div id="main-page-header-div-olva">
-                    <p:graphicImage id="main-page-olva" name="/images/olva_curier.jpg" />
+                   
                 </div>
-
+                <span class="main-page-boton-arriba icon-arrow-up"></span>
+                </div>
             </footer> 
         </main>
 
-
+        <script src="#{resource['js/particles.js']}"></script>
+	<script src="#{resource['js/particulas.js']}"></script>
     </h:body>
 </html>
 
