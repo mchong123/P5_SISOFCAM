@@ -12,7 +12,9 @@
 body{
     max-width:  100%;   
     border-color: black;
-
+}
+.ocultarScroll{
+    overflow: hidden;
 }
 
 /*****************************INICIO HEADER************************************/
@@ -218,11 +220,16 @@ nav{
     position:relative;
     z-index: 3;
 }
+nav li {
+    -webkit-box-shadow:inset 0 -1px 10px 2px #030303;
+    box-shadow:inset 0 -1px 10px 2px #030303;
+}
 nav a{
     text-decoration: none;
     color: #fff;
     display: block;
     font-size: 14px;
+
 
 }
 nav a:hover{
@@ -274,7 +281,7 @@ nav>ul>li>ul>li>ul{
     transition:all 0.2s ease;
     position:absolute;
     top:-500px;
-    left: 140px;
+    left: 148px;
     width: 100%;
 }
 nav li:hover > ul{
@@ -440,10 +447,61 @@ nav li:hover > ul{
     cursor: pointer;
 }
 #particles-js{
-	width: 100%;
-	height: 300px;
+    width: 100%;
+    height: 300px;
 
 }
+/** seccion de modales */
+.modal{
+    width: 100%;
+    height: 100vh;
+    background: rgba(14,33,50,.94);
+    position:absolute;
+    z-index: 40;
+    display: flex;
+    visibility: visible;
+    opacity: 1; 
+    left:-100%;
+}
+.mostrarModal{
+    left:0%;
+}
+
+#cerrar{
+    display: none;
+}
+#cerrar + label{
+    position: fixed;
+    color:#fff;
+    font-size: 30px;
+    z-index: 50;
+    text-align: center;
+    line-height: 40px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    animation: modal 2s;
+    animation-delay: 3s;
+    animation-fill-mode:forwards;
+    visibility: visible;
+    display: none;
+
+}
+#main-page-div-modal{
+    transition: all 1s ease;
+}
+
+#main-page-iframe-map{
+    margin-left: 50px;
+    margin-top: 50px;
+    display: none;
+}
+#map {
+    margin-top: 5%;
+    height: 80%;
+    width: 50%;
+}
+
 
 /*****************************END FOOTER*************************************/
 /*MEDIA QUERY*/
@@ -496,3 +554,14 @@ nav li:hover > ul{
         margin:0px;
     }
 }
+
+/*keyframes*/
+/*
+@keyframes modal{
+
+    100%{
+        visibility: visible;
+        opacity: 1;
+
+    }
+}*/

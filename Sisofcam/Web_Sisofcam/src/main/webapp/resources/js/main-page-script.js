@@ -3,7 +3,7 @@ $(document).ready(main);
 var contador1 = 1;
 var contador = 0;
 function main() {
-
+  //  mostrarPantallaPresentacion();
     barraInformativa();
 
     agregandoNombreImage();
@@ -13,6 +13,8 @@ function main() {
 
     //colocar imagenNav
     insertarImagenNav();
+    //modales
+    mostrarModalUbicanos();
 
 }
 ;
@@ -278,3 +280,45 @@ function insertarImagenNav() {
     
 }
 ;
+function mostrarModalUbicanos(){
+  
+    $('#main-page-li-ubicanos').click(function(){
+        $('#main-page-div-modal').addClass('mostrarModal');
+        $('#cerrar + label').css({
+           display: 'inline-block'
+        });
+        $('#main-page-iframe-map').css({
+            display: 'block'
+        });
+        $('body').toggleClass('ocultarScroll');
+    });
+    $('#btn-cerrar').click(function(){
+        $('#main-page-div-modal').removeClass('mostrarModal');
+        $('#cerrar + label').css({
+           display: 'none'
+        });
+        $('#main-page-iframe-map').css({
+            display: 'none'
+        });
+        $('body').removeClass('ocultarScroll');
+    });
+};
+
+/*
+function mostrarPantallaPresentacion(){
+  
+    $('body').css({
+        position : 'absolute',
+        top:'-500%'
+    })
+    setTimeout(mostrarBody,1000);
+    
+};
+function mostrarBody(){
+  $('body').css({
+        position : 'absolute',
+        top:'0%'
+    })
+    
+};
+*/
