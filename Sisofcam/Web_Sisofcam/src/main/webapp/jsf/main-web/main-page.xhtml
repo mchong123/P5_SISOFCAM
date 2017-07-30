@@ -10,22 +10,45 @@
         <link rel="icon" href="#{resource['/images/rueda_ico.ico']}"/>
         <h:outputStylesheet library="css" name="main-web.css"/> 
         <link rel="stylesheet" type="text/css" href="#{resource['/css/style.css']}"></link>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <h:outputScript library="js" name="jquery-3.2.1.min.js"/>
         <h:outputScript library="js" name="main-page-script.js"/>
     </h:head>
-    <h:body>        
+    <h:body>
+        <div id="main-page-div-fondo-fijo">
+            <img src="#{resource['/images/Logo_empresa_blanco.png']}"></img>
+        </div>
         <div id="main-page-div-portada">
-            
+             <img src="#{resource['/images/Logo_empresa_blanco.png']}"></img>
         </div>
         <div id="main-page-div-body-contenedor">  
             <main id="main-page-divMain">
-                <!-- seccion modal -->
+                <!-- seccion modal-->
                 <input type="checkbox" id="cerrar"></input>
                 <label for="cerrar" id="btn-cerrar" title="cerrar">X</label>
                 <div id="main-page-div-modal" class="modal">
                     <div id="map" >
 
                     </div>    
+                    <div id="main-page-div-informacion-ubicacion">
+                        <h3>INFORMACION DEL CONTACTO</h3>
+                        <p><span class="icon-phone"></span>Llamanos : 987-655759</p>
+                        <p><span class="icon-location"></span>Visitanos : Urb. San Juan Macias Mz. LL Lte. 24 Pje. Cajamarca - CALLAO</p>
+                        <p><span class="icon-mail2"></span>Escribenos :  sisofcam@gmail.com</p>
+                        <div id="main-page-div-info-contacto-siguenos">
+                            <p>SIGUENOS</p>
+                            <ul>
+                                <li><a href="https://www.facebook.com/" target="_blank"><span id="main-page-div-face" class="icon-facebook2"></span></a></li>
+                                <li><a href="https://www.facebook.com/" target="_blank"><span id="main-page-div-twiter" class="icon-twitter"></span></a></li>
+                                <li><a href="https://www.facebook.com/" target="_blank"><span id="main-page-div-linkedin" class="icon-linkedin"></span></a></li>
+                                <li><a href="https://www.facebook.com/" target="_blank"><span id="main-page-div-youtube" class="icon-youtube"></span></a></li>
+                                <li><a href="https://www.facebook.com/" target="_blank"><span id="main-page-div-instagram" class="icon-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- seccion modal NOSOTROS -->
+                <div id="main-page-div-modal-nosotros">
+                    
                 </div>
                 <!-- imagenes social -->
                 <a href="https://www.facebook.com/" target="_blank"><span id="main-page-face" class="icon-facebook2"></span></a>
@@ -49,7 +72,7 @@
 
                     <div id="main-page-header-div0">  
                         <div id="main-page-header-div1">
-                            <p:graphicImage id="main-page-logosisofcam" name="/images/Logo_Empresa.png" />
+                            <img src="#{resource['/images/Logo_empresa.png']}"></img>
                         </div>
                         <div id="main-page-header-div2">
                             <div id="main-page-div2-imagenNav">

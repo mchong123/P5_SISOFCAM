@@ -3,14 +3,12 @@ $(document).ready(main);
 var contador1 = 1;
 var contador = 0;
 function main() {
-  //  mostrarPantallaPresentacion();
+    reducirLogoScroll();
     barraInformativa();
-
     agregandoNombreImage();
     Iterador();
     atrasAdelante();
     clickImagen();
-
     //colocar imagenNav
     insertarImagenNav();
     //modales
@@ -18,7 +16,6 @@ function main() {
 
 }
 ;
-
 function barraInformativa() {
 
     $('#main-page-a-menu').click(function () {
@@ -31,15 +28,11 @@ function barraInformativa() {
         } else {
             $('#main-page-ul-datosSisofcam').animate({
                 left: '-100%'
-
             });
             contador1 = 1;
         }
         ;
-
     });
-
-
     $('.icon-menu').mouseover(function () {
 
         $('.icon-menu').css({
@@ -75,7 +68,6 @@ function barraInformativa() {
 
 }
 ;
-
 function agregandoNombreImage() {
 
 
@@ -155,14 +147,12 @@ function agregandoNombreImage() {
     }
 }
 ;
-
 function Iterador() {
 
     intervalo = setInterval(agregandoNombreImage, 3000);
 
 }
 ;
-
 function atrasAdelante() {
 
     $('#listUl li:first-child span').click(function () {
@@ -199,8 +189,6 @@ function atrasAdelante() {
 
 }
 ;
-
-
 function clickImagen() {
 
     $('#listUl img').each(function (index, elemento) {
@@ -215,7 +203,6 @@ function clickImagen() {
     });
 }
 ;
-
 function armandoImagen() {
     //src="#{resource['images/image0.jpg']}"
 
@@ -241,7 +228,7 @@ function insertarImagenNav() {
         $('#main-page-div2-descripcionImage h3').text('CÁMARAS IP');
         $('#main-page-div2-descripcionImage p').text('Muy buena elección!! ... Estos tipos de cámaras presentan una mayor calidad de imagen en comparación con las analógicas, presentan un muy buen Zoom de imagen que permite una eficiente detección de rostros, placas, a la hora de visualizar las grabaciones en busca de alguna acción delictiva. ');
     });
-    
+
     $('#mp-cam-varifocal').mouseover(function () {
         $('#main-page-div2-imagenNav').css({
             backgroundImage: "url('/Web_Sisofcam/jsf/main-web/main-page.xhtml/faces/javax.faces.resource/images/navImages/CAMARA_VERIFOCAL.jpg')"
@@ -273,52 +260,79 @@ function insertarImagenNav() {
         $('#main-page-div2-descripcionImage h3').text('CÁMARAS FALSAS');
         $('#main-page-div2-descripcionImage p').text('Una solución psicológica y realmente económica, fisicamente es idéntica a una cámara real, mas no lo es. Esta es una solución práctica si solo se desea simular que se esta grabando. ');
     });
-    
+
     //falta complementos y ver todas
     //fin primer li e inicio del segundo li
-    
-    
+
+
 }
 ;
-function mostrarModalUbicanos(){
-  
-    $('#main-page-li-ubicanos').click(function(){
+function mostrarModalUbicanos() {
+
+    $('#main-page-li-ubicanos').click(function () {
         $('#main-page-div-modal').addClass('mostrarModal');
         $('#cerrar + label').css({
-           display: 'inline-block'
+            display: 'inline-block'
         });
         $('#main-page-iframe-map').css({
             display: 'block'
         });
         $('body').toggleClass('ocultarScroll');
     });
-    $('#btn-cerrar').click(function(){
+    $('#btn-cerrar').click(function () {
         $('#main-page-div-modal').removeClass('mostrarModal');
         $('#cerrar + label').css({
-           display: 'none'
+            display: 'none'
         });
         $('#main-page-iframe-map').css({
             display: 'none'
         });
         $('body').removeClass('ocultarScroll');
     });
+}
+;
+function reducirLogoScroll(){
+    
+    var flag = false;
+    var scroll;
+    $(window).scroll(function(){
+        scroll = $(window).scrollTop();
+       if(scroll > 30){
+           if(!flag){
+               $('#main-page-header-div1 img').css({
+                   width: '150px',
+                   heigth:'48px',
+                   position: 'fixed',
+                   top: '-8px',
+                   marginTop:'0px'
+                    
+               });
+               $('#main-page-datosSisofcam').css({
+                   background : '#000'
+               });
+               $('#main-page-datosSisofcam').css({
+                   opacity: '0.5'
+               });
+               
+               flag = true;
+           }
+       } else{
+           if(flag){
+               $('#main-page-header-div1 img').css({
+                   width: '311px',
+                   heigth:'100px',
+                   marginTop:'40px',
+                   position:'static'
+               });
+               $('#main-page-datosSisofcam').css({
+                   background : '#024959'
+               });
+               $('#main-page-datosSisofcam').css({
+                   opacity: '1'
+               });
+               flag = false;
+           }
+       }
+    });
 };
 
-/*
-function mostrarPantallaPresentacion(){
-  
-    $('body').css({
-        position : 'absolute',
-        top:'-500%'
-    })
-    setTimeout(mostrarBody,1000);
-    
-};
-function mostrarBody(){
-  $('body').css({
-        position : 'absolute',
-        top:'0%'
-    })
-    
-};
-*/
