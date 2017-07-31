@@ -3,6 +3,7 @@ $(document).ready(main);
 var contador1 = 1;
 var contador = 0;
 function main() {
+    ocultarElementoNosotros();
     reducirLogoScroll();
     barraInformativa();
     agregandoNombreImage();
@@ -13,6 +14,7 @@ function main() {
     insertarImagenNav();
     //modales
     mostrarModalUbicanos();
+    mostrarModalNosotros();
 
 }
 ;
@@ -288,51 +290,99 @@ function mostrarModalUbicanos() {
             display: 'none'
         });
         $('body').removeClass('ocultarScroll');
+        ocultarConEscape();
     });
 }
 ;
-function reducirLogoScroll(){
-    
+function reducirLogoScroll() {
+
     var flag = false;
     var scroll;
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         scroll = $(window).scrollTop();
-       if(scroll > 30){
-           if(!flag){
-               $('#main-page-header-div1 img').css({
-                   width: '150px',
-                   heigth:'48px',
-                   position: 'fixed',
-                   top: '-8px',
-                   marginTop:'0px'
-                    
-               });
-               $('#main-page-datosSisofcam').css({
-                   background : '#000'
-               });
-               $('#main-page-datosSisofcam').css({
-                   opacity: '0.5'
-               });
-               
-               flag = true;
-           }
-       } else{
-           if(flag){
-               $('#main-page-header-div1 img').css({
-                   width: '311px',
-                   heigth:'100px',
-                   marginTop:'40px',
-                   position:'static'
-               });
-               $('#main-page-datosSisofcam').css({
-                   background : '#024959'
-               });
-               $('#main-page-datosSisofcam').css({
-                   opacity: '1'
-               });
-               flag = false;
-           }
-       }
-    });
-};
+        if (scroll > 30) {
+            if (!flag) {
+                $('#main-page-header-div1 img').css({
+                    width: '150px',
+                    heigth: '48px',
+                    position: 'fixed',
+                    top: '-8px',
+                    marginTop: '0px'
 
+                });
+                $('#main-page-datosSisofcam').css({
+                    background: '#000'
+                });
+                $('#main-page-datosSisofcam').css({
+                    opacity: '0.5'
+                });
+
+                flag = true;
+            }
+        } else {
+            if (flag) {
+                $('#main-page-header-div1 img').css({
+                    width: '311px',
+                    heigth: '100px',
+                    marginTop: '40px',
+                    position: 'static'
+                });
+                $('#main-page-datosSisofcam').css({
+                    background: '#024959'
+                });
+                $('#main-page-datosSisofcam').css({
+                    opacity: '1'
+                });
+                flag = false;
+            }
+        }
+    });
+}
+;
+function mostrarModalNosotros() {
+    $('#main-page-li-nosotros').click(function () {
+
+        $('#main-page-div-modal-nosotros').show(800);
+        $('#cerrar + label').css({
+            display: 'inline-block'
+        });
+        $('body').toggleClass('ocultarScroll');
+
+
+    });
+    $('#btn-cerrar').click(function () {
+        ocultarElementoNosotros();
+        $('#cerrar + label').css({
+            display: 'none'
+        });
+        $('body').removeClass('ocultarScroll');
+        ocultarConEscape()
+    });
+
+}
+;
+
+function ocultarElementoNosotros() {
+    $('#main-page-div-modal-nosotros').hide(800);
+}
+
+function ocultarConEscape() {
+    $(document).keyup(function (event) {
+        if (event.which == 27) {
+            if ($('#main-page-div-modal-nosotros').click()) {
+                ocultarElementoNosotros();
+            }
+            if ($('#main-page-li-ubicanos').click()) {
+                $('#main-page-div-modal').removeClass('mostrarModal');
+                $('#main-page-iframe-map').css({
+                    display: 'none'
+                });
+            }
+
+            $('#cerrar + label').css({
+                display: 'none'
+            });
+            $('body').removeClass('ocultarScroll');
+        }
+    });
+}
