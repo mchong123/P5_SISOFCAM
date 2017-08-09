@@ -38,13 +38,30 @@ body{
     width: 100%;
     height: 100vh;
     background: #0e2132;
-     z-index: 9;
+    z-index: 9;
     animation: portada 7s; 
     animation-fill-mode:forwards;
     text-align: center;
 }
 #main-page-div-portada img{
     margin-top: 35vh;
+}
+.main-page-div-portada-h1 h1{
+    display: inline-block;
+    float: left;
+    color:#fff;
+    position:relative;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+.main-page-div-portada-h1 h1 span{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #0e2132;
+    border-left: 1px solid #fff;
+    animation: portada2 2s infinite alternate;
+    animation-delay: 1.5s;
 }
 #main-page-div-body-contenedor{
     position: relative;
@@ -70,9 +87,24 @@ body{
     z-index: 7;
     width: 94.6%;
     transition: all 1s ease;
-    
 }
 
+#main-page-datosSisofcam h2{
+    position: fixed;
+    display: inline-block;
+    float: left;
+    color:#fff;
+    margin-top: 5px;
+}
+#main-page-datosSisofcam h2 span{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #024959;
+    border-left: 1px solid #fff;
+    animation: maquina 3s infinite alternate steps(47);
+    animation-delay: .5s;
+}
 #main-page-a-menu{
     display: none;
 }
@@ -131,8 +163,8 @@ body{
     margin-left: 30px;
     max-width: 100%;
     transition: all .9s ease;
-    
-    
+
+
 }
 #main-page-header-div2{
     display: flex;
@@ -399,98 +431,96 @@ nav li:hover > ul{
     transform: scale(1.2,1.2);
 }
 /*****************************FIN HEADER***************************************/
+
+#main-page-div-entre-header-seccion{
+    width: 100%;
+    height: 100px;
+    background: #0e2132;;
+    position:relative;
+    text-align: center;
+
+}
+.cuadrado{
+    border: 20px solid #90D4F9;
+    border-color: #0e2132 transparent transparent transparent;
+    width: 0;
+    height: 0;
+    position:absolute;
+    margin-left: 45%;
+
+}
+#main-page-div-entre-header-seccion p{
+    color:#fff;
+    font-size: 25px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+
 /*******************************INICIO SECTION*********************************/
 #main-page-section-main{
     margin-top: 30px;
 }
 /*ARTICLE 1*/
-
 #main-page-article-section{
-    display: inline-block;
-    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 130px;
+   
 }
-
-#main-page-div-caterogias{
-    margin-left: 1%; 
+#main-page-article-section>div{
+    -webkit-box-shadow: 0 10px 15px -5px rgba(0,0,0,0.65);
+    box-shadow: 0 10px 15px -5px rgba(0,0,0,0.65);
+     transition: all .1s ease;
 }
-
-#main-page-label-categoria{
-    display: inline-block;
+#main-page-article-section>div:hover{
+    -webkit-box-shadow: 0 10px 15px -5px rgba(20,10,10,1);
+    box-shadow: 0 10px 15px -5px rgba(20,10,10,1);
+    transform: scale(1.05);
+}
+#main-page-article-section div,#main-page-article-section div label{
+    cursor:pointer;
+}
+.main-page-categoria-item{
+    display: block;
+    text-align: center;
+}
+.main-page-categoria-label{
+    display: block;
     font-family: fantasy;
-    font-size: 30px;
-    text-decoration: underline;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    font-size: 18px;
 }
-#main-page-div-seguridad{
-    display: inline-block;
-    width: 300px;
-    margin-bottom: 20px;
-
+#main-page-section-subcategorias,#main-page-section-subcategorias-acceso,#main-page-section-subcategorias-lectores{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 600px;
+    margin-top: 30px;
+    display: none;
 }
-
-#main-page-div-camaraimage{
-    margin-left: 1%;
-    display: inline-block;
-    border: solid 1px;
-    margin-left: 20px;
-}
-#main-page-hr1{
-    display: inline-block;
-    width: 1px;
-    height: 105px;
-    border: 1px solid;
-    background: #000;
-}
-#main-page-label-seguridad{
-    display: inline-block;
-    font-family: fantasy;
-    font-size: 20px;
-    position: relative;
-    right: -10px;
-    top: -40px;
+#main-page-section-subcategorias>div,#main-page-section-subcategorias-acceso>div,#main-page-section-subcategorias-lectores>div{
+    margin-left: 30px;
 }
 
-#main-page-div-controlAcceso{
-    display: inline-block;
-    width: 400px;
+#main-page-hr-categoria-division{
+    margin-top: 20px;
+    border: 3px solid;
 }
-#main-page-div-videoPortero{
-    margin-left: 1%;
-    display: inline-block;
-    border: solid 1px;
-    margin-left: 20px;
+#main-page-hr-subcategoria-division{
+    margin-top: 20px;
+    border: 3px solid;
 }
-#main-page-hr2{
-    display: inline-block;
-    width: 1px;
-    height: 95px;
-    border: 1px solid;
-    background: #000;
-}
-#main-page-label-controlAcceso{
-    display: inline-block;
-    font-family: fantasy;
-    font-size: 20px;
-    position: relative;
-    right: -10px;
-    top: -30px;
-}
-
-
-
-#main-page-section-subcategorias{
-    width: 65%;
-    float: right;
-}
+/*subcategoria*/
 
 /*********************************FIN SECTION***********************************/
 /*****************************INICIO FOOTER*************************************/
 #main-page-footer{  
     width: 100%;
-    height: 500px;
+    height: 300px;
     border: solid 1px;
-    background: darkslategray;
+    background: #000;
     position: relative;
 }
 
@@ -558,7 +588,7 @@ nav li:hover > ul{
     margin-top: 5%;
     text-align: center;
     padding: 20px;
-    
+
 }
 #main-page-div-informacion-ubicacion p{
     padding: 15px;
@@ -568,7 +598,7 @@ nav li:hover > ul{
 }
 
 #main-page-div-info-contacto-siguenos p{
-    
+
     font-size: 20px;
     text-align: center;
     padding: 30px;
@@ -579,12 +609,16 @@ nav li:hover > ul{
     list-style: none;
     font-size: 30px;
     color:#fff;
-    
+
 }
 #main-page-div-info-contacto-siguenos span{
     color:#fff;
+    transition: all .5s ease;
 }
-
+#main-page-div-info-contacto-siguenos span:hover{
+    font-size: 35px;
+    color:red;
+}
 /*modal NOSOTROS*/
 
 #main-page-div-modal-nosotros{
@@ -609,13 +643,13 @@ nav li:hover > ul{
     margin-left: 35%;
     margin-right: 15px;
     color:#fff;
-    font-size: 50px;
-    
+    font-size: 40px;
+
 }
 #main-page-div-nosotros-definicion h2{
     color:#fff;
     display: inline-block;
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 50px;
 }
 /*fin modal NOSOTROS*/
@@ -670,8 +704,8 @@ nav li:hover > ul{
         margin-left: 15px;
         font-size: 20px;
     }
-   
-   
+
+
 
     #main-page-divMain{
         width: 100%;
@@ -684,22 +718,38 @@ nav li:hover > ul{
 @keyframes portada{
 
     0%{
-       top:0vh;
+        top:0vh;
 
     }
     20%{
-       top:0vh;
+        top:0vh;
     }
     25%{
-       top:-100vh; 
+        top:-100vh; 
     }
     50%{
-       top:-100vh;  
+        top:-100vh;  
     }
     55%{
         top:-200vh;
     }
     100%{
         top:-200vh;
+    }
+}
+@keyframes maquina{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+@keyframes portada2{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
     }
 }

@@ -15,6 +15,8 @@ function main() {
     //modales
     mostrarModalUbicanos();
     mostrarModalNosotros();
+    manejandoScroll();
+    seleccionarCategoria();
 
 }
 ;
@@ -316,6 +318,7 @@ function reducirLogoScroll() {
                 $('#main-page-datosSisofcam').css({
                     opacity: '0.5'
                 });
+                $('#main-page-datosSisofcam h2').css({display: 'none'});
 
                 flag = true;
             }
@@ -333,6 +336,7 @@ function reducirLogoScroll() {
                 $('#main-page-datosSisofcam').css({
                     opacity: '1'
                 });
+                $('#main-page-datosSisofcam h2').css({display: 'inline-block'});
                 flag = false;
             }
         }
@@ -361,11 +365,10 @@ function mostrarModalNosotros() {
 
 }
 ;
-
 function ocultarElementoNosotros() {
     $('#main-page-div-modal-nosotros').hide(800);
 }
-
+;
 function ocultarConEscape() {
     $(document).keyup(function (event) {
         if (event.which == 27) {
@@ -386,3 +389,62 @@ function ocultarConEscape() {
         }
     });
 }
+;
+function manejandoScroll() {
+   
+    var tiempo;
+    $(window).scroll(function () {
+        clearTimeout(tiempo);
+        tiempo = setTimeout(manejoScrollTimer,35);
+        
+        
+    });
+}
+;
+
+function manejoScrollTimer(){
+    
+     var ubicacionScrollOld = $(window).scrollTop();
+    var bajada = false;
+    console.log("fuera");
+    var ubicacionScrollNew = $(window).scrollTop();
+        console.log("no entre");
+        console.log("ubicacionScrollOld :" + ubicacionScrollOld);
+        console.log("ubicacionScrollNew :" + ubicacionScrollNew);
+        console.log($('#main-page-div-entre-header-seccion').position());
+        
+            //bajando scroll
+            if (ubicacionScrollNew > 150 && ubicacionScrollNew < 650) {
+                console.log("entre if");
+                $('body,html').animate({scrollTop: $('#main-page-div-entre-header-seccion').offset().top - 35} , 700);
+                $(window).scrollTop(700);
+            }
+
+            //bajando scroll
+            // $('Cody,html').animate({scrollTop: '700'},700);
+            ubicacionScrollOld = ubicacionScrollNew;
+
+      
+    
+}
+;
+function seleccionarCategoria(){
+    
+    $('#main-page-div-seguridad').click(function(){
+        $('#main-page-section-subcategorias-acceso,#main-page-section-subcategorias-lectores').hide(300);
+        $('#main-page-section-subcategorias').show(300);
+        $('#main-page-section-subcategorias').css({display:'flex'});
+    });
+    $('#main-page-div-controlAcceso').click(function(){
+        $('#main-page-section-subcategorias,#main-page-section-subcategorias-lectores').hide(300);
+        $('#main-page-section-subcategorias-acceso').show(300);
+        $('#main-page-section-subcategorias-acceso').css({display:'flex'});
+        
+    });
+    $('#main-page-div-cat-lectores').click(function(){
+        $('#main-page-section-subcategorias,#main-page-section-subcategorias-acceso').hide(300);
+        $('#main-page-section-subcategorias-lectores').show(300);
+        $('#main-page-section-subcategorias-lectores').css({display:'flex'});
+    });
+    
+};

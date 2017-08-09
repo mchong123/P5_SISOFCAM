@@ -18,7 +18,10 @@
             <img src="#{resource['/images/Logo_empresa_blanco.png']}"></img>
         </div>
         <div id="main-page-div-portada">
-             <img src="#{resource['/images/Logo_empresa_blanco.png']}"></img>
+            <img src="#{resource['/images/Logo_empresa_blanco.png']}"></img>
+            <div class="main-page-div-portada-h1">
+                <h1>SEGURIDAD Y TECNOLOGIA PARA SU NEGOCIO<span>&#160;</span></h1>
+            </div>
         </div>
         <div id="main-page-div-body-contenedor">  
             <main id="main-page-divMain">
@@ -59,7 +62,7 @@
                     </div>
                     <div id="main-page-div-mision">
                         <h3>Nuestra Visión como empresa</h3>
-                    
+
                     </div>
                     <div id="main-page-div-vision">
                         <h3>Nuestra Misión como empresa</h3>
@@ -75,7 +78,7 @@
                 <header id="main-page-header">
 
                     <div id="main-page-datosSisofcam">
-                        
+                        <h2>Tecnología para su Hogar, Negocio u Empresa .<span>&#160;</span></h2>
                         <a href="#" id="main-page-a-menu"><span class="icon-menu"></span><strong>MENU</strong></a>
                         <ul id="main-page-ul-datosSisofcam">
                             <li id="main-page-li-inicio"><span class="icon-home3"></span>INICIO</li>
@@ -226,19 +229,14 @@
                             <li><a href="#">SISTEMAS</a>
                                 <ul>
                                     <li><a href="#">Para negocios</a></li>
-
                                     <li><a href="#">ITEM #5</a></li>
                                     <li><a href="#">ITEM #6</a>
                                         <ul>
                                             <li><a href="#">camara de seguridad ptz</a></li>
-
                                             <li><a href="#">ITEM #5</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">ITEM #7</a></li>
-
-
-
                                 </ul>
                             </li>
                             <li><a href="#">SERVICIOS</a>
@@ -277,7 +275,6 @@
                             <p></p>
                         </div>
                         <div id="contenedor-imagenes-chicas">
-
                             <ul id="listUl">
                                 <li><span class="icon-circle-left"></span></li>
                                 <li><img id= "imagen-0" class="imagen" src="#{resource['images/image0.jpg']}" alt=""/></li>
@@ -285,65 +282,118 @@
                                 <li><img id= "imagen-2" class="imagen" src="#{resource['images/image2.jpg']}" alt=""/></li>
                                 <li><span class="icon-circle-right"></span></li>
                             </ul>
-
                         </div>
                     </div>
-
-
-
-
-
-
                 </header>
-
+                <div id="main-page-div-entre-header-seccion">
+                    <p>Productos y servicios a un extrahordinario precio.</p>
+                </div>
+                <div class="cuadrado"></div>
                 <section id="main-page-section-main">
+
                     <article>
                         <section id="main-page-article-section">
-                            <div id="main-page-div-caterogias">
-                                <p:outputLabel id="main-page-label-categoria" value="CATEGORIAS"/> 
-                            </div>
 
-                            <div id="main-page-div-seguridad">
+                            <div id="main-page-div-seguridad" class="main-page-categoria-item">
                                 <div id="main-page-div-camaraimage">
                                     <p:graphicImage name="/images/cat_seguridad.jpg" />
                                 </div>
-                                <hr id="main-page-hr1"></hr>
-                                <p:outputLabel id="main-page-label-seguridad" value="SEGURIDAD"/>
+                                <p:outputLabel id="main-page-label-seguridad" class="main-page-categoria-label" value="SEGURIDAD"/>
                             </div>
 
-                            <div id="main-page-div-controlAcceso">
+                            <div id="main-page-div-controlAcceso" class="main-page-categoria-item">
                                 <div id="main-page-div-videoPortero">
                                     <p:graphicImage name="/images/cat_controlAcceso.jpg" />
                                 </div>
-                                <hr id="main-page-hr2"></hr> 
-                                <p:outputLabel id="main-page-label-controlAcceso" value="CONTROL DE ACCESO"/>
+                                <p:outputLabel id="main-page-label-controlAcceso" class="main-page-categoria-label" value="CONTROL DE ACCESO"/>
                             </div>
 
-                            <div id="main-page-div-controlAcceso">
-                                <div id="main-page-div-videoPortero">
-                                    <p:graphicImage name="/images/cat_controlAcceso.jpg" />
+                            <div id="main-page-div-cat-lectores" class="main-page-categoria-item">
+                                <div id="main-page-div-lectores">
+                                    <p:graphicImage name="/images/cat_lectores.jpg" />
                                 </div>
-                                <hr id="main-page-hr2"></hr> 
-                                <p:outputLabel id="main-page-label-controlAcceso" value="LECTORES"/>
+                                <p:outputLabel id="main-page-label-lectores" class="main-page-categoria-label" value="LECTORES"/>
+                            </div>
+                            <div id="main-page-div-computadoras" class="main-page-categoria-item">
+                                <div id="main-page-div-computadoras">
+                                    <p:graphicImage name="/images/cat_pc_accesorios.jpg" />
+                                </div>
+                                <p:outputLabel id="main-page-label-controlAcceso" class="main-page-categoria-label" value="PC, accesorios redes"/>
+                            </div>
+                            <div id="main-page-div-celulares" class="main-page-categoria-item">
+                                <div id="main-page-div-celulares-img">
+                                    <p:graphicImage name="/images/cat_celulares.jpg" />
+                                </div>
+                                <p:outputLabel id="main-page-label-celulares" class="main-page-categoria-label" value="CELULARES Y ACCESORIOS"/>
+                            </div>
+                            <div id="main-page-div-cat-sistemas" class="main-page-categoria-item">
+                                <div id="main-page-div-sistemas">
+                                    <p:graphicImage name="/images/cat_sistemas.png" />
+                                </div>
+                                <p:outputLabel id="main-page-label-sistemas" class="main-page-categoria-label" value="SISTEMAS"/>
+                            </div>
+                            <div id="main-page-div-servicios-generales" class="main-page-categoria-item">
+                                <div id="main-page-div-servicios">
+                                    <p:graphicImage name="/images/cat_servicios.png" />
+                                </div>
+                                <p:outputLabel id="main-page-label-controlAcceso" class="main-page-categoria-label" value="SERVICIOS"/>
                             </div>
 
 
-                        </section>  
+                        </section>
+                        <hr id="main-page-hr-categoria-division"></hr>
                         <section id="main-page-section-subcategorias">
-                            <div id="main-page-div-controlAcceso">
-                                <div id="main-page-div-videoPortero">
-                                    <p:graphicImage name="/images/cat_controlAcceso.jpg" />
+                            <div id="main-page-div-subcategoria-camaras" class="main-page-categoria-item">
+                                <div id="main-page-div-subcategoria-camaras-img">
+                                    <img class="imagen" src="#{resource['images/subcat_camaras_seguridad.jpg']}" alt=""/>
                                 </div>
-                                <hr id="main-page-hr2"></hr> 
-                                <p:outputLabel id="main-page-label-controlAcceso" value="LECTORES"/>
+                                <p:outputLabel id="main-page-label-camaras" class="main-page-categoria-label" value="CAMARAS DE SEGURIDAD"/>
+                            </div>
+                            <div id="main-page-div-subcategoria-alarmas" class="main-page-categoria-item">
+                                <div id="main-page-div-subcategoria-alarmas-img">
+                                    <img class="imagen" src="#{resource['images/subcat_alarmas-vecinales.jpg']}" alt=""/>
+                                </div>
+                                <p:outputLabel id="main-page-label-alarmas" class="main-page-categoria-label" value="ALARMAS"/>
+                            </div>
+                            <div id="main-page-div-subcategoria-gps" class="main-page-categoria-item">
+                                <div id="main-page-div-subcategoria-gps-img">
+                                    <img class="imagen" src="#{resource['images/subcat_gps.jpg']}" alt=""/>
+                                </div>
+                                <p:outputLabel id="main-page-label-gps" class="main-page-categoria-label" value="GPS"/>
                             </div>
                         </section>
 
+                        <section id="main-page-section-subcategorias-acceso">
+                            <div id="main-page-div-subcategoria-videoportero" class="main-page-categoria-item">
+                                <div id="main-page-div-subcategoria-videoportero-img">
+                                    <img class="imagen" src="#{resource['images/subcat_videoportero.jpg']}" alt=""/>
+                                </div>
+                                <p:outputLabel id="main-page-label-videoportero" class="main-page-categoria-label" value="VIDEOPORTEROS"/>
+                            </div>
+                            <div id="main-page-div-subcategoria-intercomunicador" class="main-page-categoria-item">
+                                <div id="main-page-div-subcategoria-intercomunicador-img">
+                                    <img class="imagen" src="#{resource['images/subcat_intercomunicaores.jpg']}" alt=""/>
+                                </div>
+                                <p:outputLabel id="main-page-label-intercomunicador" class="main-page-categoria-label" value="INTERCOMUNICADORES"/>
+                            </div>
+
+
+                        </section>
+                        <section id="main-page-section-subcategorias-lectores">
+                             <div id="main-page-div-subcategoria-lectores" class="main-page-categoria-item">
+                            <div id="main-page-div-subcategoria-lectores-img">
+                                <img class="imagen" src="#{resource['images/subcat_biometrico.png']}" alt=""/>
+                            </div>
+                            <p:outputLabel id="main-page-label-lectores" class="main-page-categoria-label" value="BIOMETRICOS"/>
+                        </div>
+                        </section>
+                        
+                        
+                      <hr id="main-page-hr-subcategoria-division"></hr> 
                     </article>
                     <article>
 
                     </article>
-
                 </section>
                 <aside></aside>
                 <footer id="main-page-footer">
